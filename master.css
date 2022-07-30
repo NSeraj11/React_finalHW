@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* container */
+.container {
+	max-width: 1280px;
+	margin: auto;
+	padding: 1rem 0.5rem;
+}
+
+.container h1 {
+	text-align: center;
+	padding-bottom: 2rem;
+}
+
+/* card */
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2rem;
+}
+
+.card {
+	border: 3px solid lightgray;
+	padding: 1rem;
+	background: white;
+}
+
+.card__header {
+    color:blue;
+	border-bottom: 1px solid black;
+	padding-bottom: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.card__footer {
+	margin-top: 0.5rem;
+}
+
+.card__footer-text {
+	font-weight: bold;
+	font-size: 0.9rem;
+}
+
+.btn-delete{
+    padding: 2px;
+    border:1px solid blue;
+    background-color: transparent;
+}
+
+@media screen and (max-width: 1040px) {
+	.cards {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.cards {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.cards {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
